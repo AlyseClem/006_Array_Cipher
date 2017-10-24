@@ -10,15 +10,16 @@ public class CaesarCipher {
 		int index, keyAdded;
 		
 		
-		System.out.println("Test alpha length = " + alpha.length());
-		System.out.println("First char is: " + alpha.charAt(0));
-		System.out.println("Last char is: " + alpha.charAt(alpha.length()-1));
-		
+		//System.out.println("Test alpha length = " + alpha.length());
+		//System.out.println("First char is: " + alpha.charAt(0));
+		//System.out.println("Last char is: " + alpha.charAt(alpha.length()-1));
+		/*
 		for (int i = 0; i < alpha.length(); i++) {
 			System.out.println(alpha.charAt(i));
 		}
 		
 		System.out.println("\n\n");
+		*/
 		
 		for (int i=0; i < plainText.length(); i++) {
 			System.out.println(plainText.charAt(i));
@@ -50,8 +51,8 @@ public class CaesarCipher {
 				keyAdded -= alpha.length();
 			}**/
 			
-			System.out.println("Encoded is " + alpha.charAt(keyAdded));
-			
+			//System.out.println("Encoded is " + alpha.charAt(keyAdded));
+			secretText += alpha.charAt(keyAdded);
 		}
 		
 		return secretText;
