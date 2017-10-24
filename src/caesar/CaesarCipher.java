@@ -21,14 +21,14 @@ public class CaesarCipher {
 		System.out.println("\n\n");
 		*/
 		
-		for (int i=0; i < plainText.length(); i++) {
-			System.out.println(plainText.charAt(i));
-		}
+		//for (int i=0; i < plainText.length(); i++) {
+			//System.out.println(plainText.charAt(i));
+		//}
 		
 		/*
 		 * Each char that I read from plainText, I find the index in alpha
 		 * For examples, read A, look up index for A get 0
-		 * Read M, look up index for M get 12
+		 * Read M, look up index for M get 12index
 		 * Then, add key to that index, so A index 0 becomes O+key
 		 * and 0+key becomes my coded char
 		 * let's say key = 1, then A index 0, 0 + 1 = 1, charAt 1 is B
@@ -51,6 +51,8 @@ public class CaesarCipher {
 				keyAdded -= alpha.length();
 			}**/
 			
+			if (keyAdded == 27)
+				keyAdded = 26;
 			//System.out.println("Encoded is " + alpha.charAt(keyAdded));
 			secretText += alpha.charAt(keyAdded);
 		}
