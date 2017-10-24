@@ -9,7 +9,7 @@ public class BeginHere {
 		CaesarCipher myCipher = new CaesarCipher();
 		
 		System.out.println("Please enter the plain text to encode.");
-		String plainText = kbd.nextLine();
+		String plainText = kbd.nextLine().toLowerCase();
 		
 		System.out.println("Please enter the key (how many times you will shift):");
 		int key = kbd.nextInt();
