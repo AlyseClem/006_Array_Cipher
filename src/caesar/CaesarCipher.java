@@ -2,13 +2,14 @@ package caesar;
 
 public class CaesarCipher {
 	
-	private String alpha = "abcdefghijklmnopqrstuvwxyz";
+	private String alpha = "abcdefghijklmnopqrstuvwxyz ";
 
 	public String encode(String plainText, int key) {
 		
 		String secretText = "";
 		int index, keyAdded;
-	
+		
+		
 		System.out.println("Test alpha length = " + alpha.length());
 		System.out.println("First char is: " + alpha.charAt(0));
 		System.out.println("Last char is: " + alpha.charAt(alpha.length()-1));
