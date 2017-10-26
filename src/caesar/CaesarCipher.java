@@ -2,10 +2,11 @@ package caesar;
 
 public class CaesarCipher {
 	
-	private String alpha = "abcdefghijklmnopqrstuvwxyz 0123456789.:'";
+	private String alpha = "abcdefghijklmnopqrstuvwxyz0123456789.:'";
 
 	public String encode(String plainText, int key) {
 		
+	
 		String secretText = "";
 		int index, keyAdded;
 		
@@ -36,12 +37,21 @@ public class CaesarCipher {
 		 */
 		
 		for (int i=0; i < plainText.length();i++) {
-			index = alpha.indexOf(plainText.charAt(i));
+			if (plainText.charAt(i) != ' ' ) {
+				index = alpha.indexOf(plainText.charAt(i));
+				keyAdded = (index + key) % alpha.length();
+				secretText = secretText + alpha.charAt(keyAdded);
+			} else {
+ 				secretText = secretText + " ";
+ 			}
+			
+			}
+	
 			//System.out.println("index = " + index);
 			
-			/** Doug's Method **/
+			/** Doug's Method 
 			keyAdded = (index + key) % alpha.length();
-			
+			**/
 			
 			/** Will's Method:
 			keyAdded = index + key;
@@ -51,11 +61,13 @@ public class CaesarCipher {
 				keyAdded -= alpha.length();
 			}**/
 			
+			/** Mitchell's solution for space problem
 			if (keyAdded == 27)
 				keyAdded = 26;
+			**/
 			//System.out.println("Encoded is " + alpha.charAt(keyAdded));
-			secretText += alpha.charAt(keyAdded);
-		}
+			//secretText += alpha.charAt(keyAdded);
+		
 		
 		return secretText;
 		

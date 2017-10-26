@@ -1,0 +1,18 @@
+Grade Checkpoint #1: encoding
+
+1. JOP
+2. executable Jar
+3. JOP - ask 'do you want to encode, decode, crack, or exit?'
+-- branch, right now we only have encode so the other ones are just place holders
+4. For encoding, ask for the plain text message
+5. Ask for the key (how many times to shift)
+6. Display the encoded message
+7. Loop -  ask 'Do you want to encode another msg (Y/N)' (trap errors)
+Either go again or a nice exit
+
+
+Grade Checkpoint #2: decoding
+
+
+
+Grade Checkpoint #3: cracking (don't know the key)
